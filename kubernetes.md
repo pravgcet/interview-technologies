@@ -92,3 +92,33 @@ The deployment process typically looks like this:
 **4. Kubernetes Scheduler** → Schedules the application in Worker Nodes.
 
 **5. Services & Ingress** → Exposes the application for users.
+
+## What is a Node?
+
+A Node is a worker machine in a Kubernetes cluster that runs application workloads. It can be a physical server or a virtual machine (VM).
+
+Each Node contains:
+
+- **Kubelet** – Communicates with the control plane & manages containers.
+- **Container Runtime** – Runs containers (e.g., Docker, containerd).
+- **Kube Proxy** – Manages networking & load balancing between Pods.
+
+🔹 Types of Nodes:
+
+- **Master Node (Control Plane)** – Manages the cluster & scheduling.
+- **Worker Node** – Runs the actual applications (Pods).
+
+## What is a Pod?
+
+A Pod is the smallest deployable unit in Kubernetes. It represents a single instance of a running process in your cluster.
+
+A Pod contains:
+
+- One or more containers (usually Docker).
+- Networking – Each Pod gets a unique IP address.
+- Storage (optional) – Can attach Persistent Volumes.
+
+🔹 Types of Pods:
+
+- **Single-Container Pod** – Runs one container (most common).
+- **Multi-Container Pod** – Runs multiple tightly coupled containers (e.g., app + logging agent).
